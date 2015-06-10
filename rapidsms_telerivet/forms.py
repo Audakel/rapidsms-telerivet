@@ -9,6 +9,7 @@ class TelerivetForm(BaseHttpForm):
     id = forms.CharField(required=False)
     message_type = forms.CharField(required=False)
     from_number = forms.CharField()
+    from_number_e164 = forms.CharField()
     contact_id = forms.CharField(required=False)
     phone_id = forms.CharField(required=False)
     to_number = forms.CharField(required=False)
