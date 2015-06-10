@@ -33,6 +33,6 @@ class TelerivetForm(BaseHttpForm):
         return phone_id
 
     def get_incoming_data(self):
-        connections = self.lookup_connections([self.cleaned_data['from_number']])
+        connections = self.lookup_connections([self.cleaned_data['from_number_e164']])
         return {'connection': connections[0],
                 'text': self.cleaned_data['content']}
